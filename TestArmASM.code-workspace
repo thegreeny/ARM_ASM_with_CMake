@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"actionButtons": {
+			"reloadButton": null,
+			"defaultColor": "white",
+			"useScripts": true,
+			"npmClient": "npm",
+			"monorepo": true,
+			"commands": [
+				{
+					"name": "init CMake (Toolchain)",
+					"color": "#bbbbbb",
+					"command": "cmake -G\"MinGW Makefiles\" -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE:PATH=\"toolchain.cmake\" -S . -B Build",
+					"singleInstance": true
+				},
+				{
+					"name": "init CMake (Toolchain) Debug",
+					"color": "#bbbbbb",
+					"command": "cmake -G\"MinGW Makefiles\" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE:PATH=\"toolchain.cmake\" -S . -B Build",
+					"singleInstance": true
+				},
+				{
+					"name": "Build",
+					"color": "#00dd00",
+					"command": "cd Build && cmake --build .",
+					"singleInstance": true
+				}
+			]
+		}
+	}
+}
