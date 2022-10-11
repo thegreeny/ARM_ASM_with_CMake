@@ -25,25 +25,30 @@ Bauen
 X:\Test Assembler\Build>cmake --build .
 ````
 
-# Linux
+# Unix
 
 ## ARM GCC installieren
 
-Ubuntu
+### Ubuntu
 ```
 sudo apt install gcc-arm-none-eabi cmake
 ```
 
-Arch
+### Arch
 ```
 yay -S gcc-arm-none-eabi-bin 
 sudo pacman -S cmake
 ```
 
+### macOS
+```
+brew install gcc-arm-embedded
+```
+
 ## CMake vorbereiten
 
 ```
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE:PATH="toolchain_linux.cmake" -S . -B Build
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE:PATH="toolchain.cmake" -S . -B Build
 ```
 
 ## Kompilieren
@@ -51,8 +56,8 @@ In den Build-Ordner wechseln:
 ```
 cd Build
 ```
-Bauen
+
+Bauen:
 ```
 cmake --build .
 ```
-
