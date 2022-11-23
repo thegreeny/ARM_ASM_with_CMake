@@ -1,19 +1,16 @@
 cmake_minimum_required(VERSION 3.17)
 
+include("toolchain.cmake")
+
 project(testApp)
 
 # Enable ASM and C
-enable_language(C ASM)
+enable_language(ASM C)
 
 # Define all Files:
 add_executable(
     testApp
     "HelloWorld.s"
-)
-
-add_compile_options(
-    testApp
-    "-mcpu=cortex-m0" # specific for cortex-m0
 )
 
 # Complete the output with .elf extension
