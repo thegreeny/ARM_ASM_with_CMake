@@ -15,13 +15,13 @@
 				{
 					"name": "init CMake (Toolchain)",
 					"color": "#bbbbbb",
-					"command": "cmake -G\"MinGW Makefiles\" -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE:PATH=\"toolchain.cmake\" -S . -B Build",
+					"command": "cmake -G\"MinGW Makefiles\" -S . -B Build",
 					"singleInstance": true
 				},
 				{
 					"name": "init CMake (Toolchain) Debug",
 					"color": "#bbbbbb",
-					"command": "cmake -G\"MinGW Makefiles\" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE:PATH=\"toolchain.cmake\" -S . -B Build",
+					"command": "cmake -G\"MinGW Makefiles\" -DCMAKE_BUILD_TYPE=Debug -S . -B Build",
 					"singleInstance": true
 				},
 				{

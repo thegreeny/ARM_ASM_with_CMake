@@ -12,7 +12,7 @@ Nach z.B. C:\Toolchains\
 ## CMake vorbereiten
 In den Unterordner _Build_ vorbereiten:
 ````
-cmake -G"MinGW Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE:PATH="toolchain.cmake" -S . -B Build
+cmake -G"MinGW Makefiles" -DCMAKE_BUILD_TYPE=Debug -S . -B Build
 ````
 
 ## Kompilieren
@@ -48,7 +48,7 @@ brew install gcc-arm-embedded
 ## CMake vorbereiten
 
 ```
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE:PATH="toolchain.cmake" -S . -B Build
+cmake -DCMAKE_BUILD_TYPE=Debug -S . -B Build
 ```
 
 ## Kompilieren
