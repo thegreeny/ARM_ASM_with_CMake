@@ -32,4 +32,5 @@ add_custom_command(
     COMMAND "${OBJ_COPY}"
     ARGS -O binary $<TARGET_FILE:testApp> output.bin
     #ARGS -O ihex $<TARGET_FILE:testApp> output.hex
+    COMMENT "Generate $<TARGET_FILE:testApp> -> output.bin"
 )
