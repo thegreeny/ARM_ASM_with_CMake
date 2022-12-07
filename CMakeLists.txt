@@ -5,13 +5,12 @@ include("toolchain.cmake")
 project(testApp)
 
 # Enable ASM and C
-enable_language(ASM C)
+enable_language( ASM C )
 
 # Define all Files:
 add_executable(
     testApp
-    "HelloWorld.s"
-)
+    "HelloWorld.s" )
 
 # Complete the output with .elf extension
 set_target_properties(testApp PROPERTIES SUFFIX ".elf")
@@ -32,5 +31,6 @@ add_custom_command(
     COMMAND "${OBJ_COPY}"
     ARGS -O binary $<TARGET_FILE:testApp> output.bin
     #ARGS -O ihex $<TARGET_FILE:testApp> output.hex
-    COMMENT "Generate $<TARGET_FILE:testApp> -> output.bin"
-)
+    COMMENT "Generate $<TARGET_FILE:testApp> -> output.bin" )
+
+add_subdirectory( linker_script )
