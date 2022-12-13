@@ -8,9 +8,9 @@ set(CMAKE_ASM_COMPILER  "arm-none-eabi-gcc"    )
 set(OBJ_COPY_PATH       "arm-none-eabi-objcopy")
 
 # Set the Flags for Cortex-M0
-set(CMAKE_C_FLAGS       "-nostdlib" )
-set(CMAKE_CXX_FLAGS     "-nostdlib" )
-set(CMAKE_ASM_FLAGS     "-nostdlib" )
+set(CMAKE_C_FLAGS       "-nostdlib -march=armv6" )
+set(CMAKE_CXX_FLAGS     "-nostdlib -march=armv6" )
+set(CMAKE_ASM_FLAGS     "-nostdlib -march=armv6" )
 
 # With startup files (auto-init):
 #set(CMAKE_EXE_LINKER_FLAGS "--specs=nosys.specs" CACHE INTERNAL "")
